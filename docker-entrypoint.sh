@@ -135,7 +135,7 @@ if [ "$1" = 'postgres' ]; then
 					op='CREATE'
 				fi
 				"${psql[@]}" --username postgres <<-EOSQL
-					$op USER "$USER_NAME" WITH SUPERUSER PASSWORD '$USER_PASSWORD' ;
+					$op USER "$USER_NAME" WITH PASSWORD '$USER_PASSWORD' ;
 				EOSQL
 			done
 		fi
